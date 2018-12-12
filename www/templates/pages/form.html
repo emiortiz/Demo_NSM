@@ -1,0 +1,127 @@
+<ion-view cache-view="false">
+    <ion-content class="auto-overflow-content">
+        <div>
+
+            <div class="form" ng-if="products[0].value" >
+                <h3>Seguro familiar</h3>
+                <label class="item item-input item-select">
+
+                    <div class="input-label">
+                        Monto a asegurar
+                    </div>
+
+                    <select ng-model="dataSeguros.planFamiliar">
+                        <option ng-value="'opcion 1'">1.000.000</option>
+                        <option ng-value="'opcion 2'">2.000.000</option>
+                        <option ng-value="'opcion 3'">3.000.000</option>
+                        <option ng-value="'opcion 3'">4.000.000</option>
+                        <option ng-value="'opcion 3'">5.000.000</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="form" ng-if="products[1].value">
+                <h3>Robo cajero</h3>
+                <h4>Monto Cuota</h4>
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Monto Cuota" ng-model="dataSeguros.cajeroCuota" disabled>
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="form" ng-if="products[2].value">
+                <h3>Robo cartera</h3>
+                <h4>Monto Cuota</h4>
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Monto Cuota" ng-model="dataSeguros.carteraCuota" disabled>
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="form" ng-if="products[3].value">
+                <h3>Seguro Compra</h3>
+
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Plan que adquiere
+                        </div>
+                        <select ng-model="dataSeguros.planCompra">
+                            <option ng-value="'Clasico'">Clasico</option>
+                        <option ng-value="'Premium'">Premium</option>
+                        </select>
+                    </label>
+                </div>
+                <h4>Monto Cuota</h4>
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Monto Cuota" ng-model="dataSeguros.CompraCuota" disabled>
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="form" ng-if="products[4].value">
+                <h3>Seguro tecnologia</h3>
+
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Plan que adquiere
+                        </div>
+                        <select ng-model="">
+                            <option ng-value=""></option>
+                            <option ng-value="">Plan A</option>
+                            <option ng-value="">Plan B</option>
+                            <option ng-value="">Plan C</option>
+                        </select>
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="form" ng-if="products[5].value">
+                <h3>Seguro Accidentes</h3>
+
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Monto a asegurar
+                        </div>
+
+                        <select ng-model="dataSeguros.planAccidentes">
+                            <option ng-value="'opcion 1'">150.000</option>
+                            <option ng-value="'opcion 2'">300.000</option>
+                            <option ng-value="'opcion 3'">500.000</option>
+                        </select>
+                    </label>
+                </div>
+
+            </div>
+
+
+            <div class="form" ng-if="products[6].value">
+                <h3>Seguro prevencion familiar</h3>
+
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Monto Cuota" ng-model="dataSeguros.prevFamiliarCuota" disabled> 
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="button-form button-container">
+                <a ui-sref="app.scanner">
+                    <button class="button button-block button-assertive">Proximo</button>
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

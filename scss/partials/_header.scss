@@ -1,0 +1,54 @@
+.nav-bar-container {
+    .nav-bar-block {
+        .bar-header {
+            border-bottom-width: 0;
+
+            .button {
+                @include custom-transition(transform, 400ms, ease);
+                @include rotate(0deg);
+
+                &.open {
+                	@include rotate(180deg);
+
+                    &:before{
+                        font-weight: $font-weight-regular;
+                    }
+                }
+
+                &:before {
+                    font-size: $font-size-x-large;
+                    font-weight: $font-weight-bold;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+
+.modal,
+.menu-content {
+    .bar {
+        &.bar-assertive {
+            height: 50px;
+            line-height: 50px;
+            background-color: $assertive-alternate;
+
+            .title {
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-size: $font-size-large;
+                left: 0 !important;
+
+                .nav-bar-title {
+                    vertical-align: top;
+                }
+
+                img {
+                    max-height: 100%;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}

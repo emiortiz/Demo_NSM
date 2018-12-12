@@ -1,0 +1,39 @@
+.platform-ios {
+    .scroll-content {
+        &.auto-overflow-content {
+            overflow: hidden;
+
+            > .scroll {
+                height: 100%;
+            }
+        }
+
+        &.has-header {
+            top: 0px !important;
+        }
+    }
+
+    .modal,
+    .menu-content {
+        .nav-bar-container {
+            .nav-bar-block{
+                .bar {
+                    &.bar-assertive {
+                        height: 50px !important;
+
+                        .title {
+                            right: 0 !important;
+                            margin-top: 0 !important;
+                        }
+                    }
+
+                    .button-left {
+                        button {
+                            margin-top: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

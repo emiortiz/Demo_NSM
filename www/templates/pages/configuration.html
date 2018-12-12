@@ -1,0 +1,215 @@
+<ion-view cache-view="false">
+    <ion-content class="auto-overflow-content">
+        <form ng-submit="setConfiguration()" class="custom-form">
+            <div class="list">
+                <div class="item-accordion" slide-accordion close-others="false">
+                    <div class="ac-header">
+                        General
+                        <div class="icon-container">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="ac-body">
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Servidor</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Servidor" ng-model="config.general.httpURL">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Token</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Token" ng-model="config.general.token">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-accordion" slide-accordion close-others="false">
+                    <div class="ac-header">
+                        Clases Documentales
+                        <div class="icon-container">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="ac-body">
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Documento Asociado</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Documento Asociado" ng-model="config.classes.documentClass">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Solicitud</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Solicitud" ng-model="config.classes.requestClass">
+                            <div></div>
+                        </div>
+
+                        <!-- <div class="ac-body-item">
+                            <label class="ac-body-item-label">Banco</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Banco" ng-model="config.classes.bankClass">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Cheque</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Cheque" ng-model="config.classes.checkClass">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Cliente</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Cliente" ng-model="config.classes.clientClass">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Cuenta Cliente</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Cuenta Cliente" ng-model="config.classes.accountClientClass">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Endoso</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Endoso" ng-model="config.classes.endorsementClass">
+                            <div></div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="item-accordion" slide-accordion close-others="false">
+                    <div class="ac-header">
+                        Servicios
+                        <div class="icon-container">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="ac-body">
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Creación de documento</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Creación de documento" ng-model="config.services.documentService">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Recursos\Actualización</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Recursos\Actualización" ng-model="config.services.resourceService">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Búsqueda</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Búsqueda" ng-model="config.services.searchService">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Creación de documento con template</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Creación de documento con template" ng-model="config.services.formService">
+                            <div></div>
+                        </div>
+
+                        <div class="ac-body-item">
+                            <label class="ac-body-item-label">Firmar documento</label>
+                            <input type="text" class="ac-body-item-input" placeholder="Firmar documento" ng-model="config.services.signService">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-accordion" slide-accordion close-others="false">
+                    <div class="ac-header">
+                        Templates
+                        <div class="icon-container">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-accordion" slide-accordion close-others="false">
+                        <div class="ac-header">
+                            Solicitud de tarjeta
+                            <div class="icon-container">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <div class="ac-body">
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Ruta al imagen del Jasper</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Ruta al imagen del Jasper" ng-model="config.templates.salesChannelSolution.backgroundImage">
+                                <div></div>
+                            </div>
+
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Tamaño de imagen de firma</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Tamaño de imagen de firma" ng-model="config.templates.salesChannelSolution.signatureImageSize">
+                                <div></div>
+                            </div>
+
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Posición X de la firma</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Posición X de la firma" ng-model="config.templates.salesChannelSolution.signatureXPos">
+                                <div></div>
+                            </div>
+
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Posición Y de la firma</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Posición Y de la firma" ng-model="config.templates.salesChannelSolution.signatureYPos">
+                                <div></div>
+                            </div>
+
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Campo Generado automáticamente</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Posición Y de la firma" ng-model="config.templates.salesChannelSolution.signatureYPos">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="item-accordion" slide-accordion close-others="false">
+                        <div class="ac-header">
+                            Cheques
+                            <div class="icon-container">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <div class="ac-body">
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Ruta al imagen del Jasper</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Ruta al imagen del Jasper" ng-model="config.templates.checksSolution.backgroundImage">
+                                <div></div>
+                            </div>
+
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Tamaño de imagen de firma</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Tamaño de imagen de firma" ng-model="config.templates.checksSolution.signatureImageSize">
+                                <div></div>
+                            </div>
+
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Posición X de la firma</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Posición X de la firma" ng-model="config.templates.checksSolution.signatureXPos">
+                                <div></div>
+                            </div>
+
+                            <div class="ac-body-item">
+                                <label class="ac-body-item-label">Posición Y de la firma</label>
+                                <input type="text" class="ac-body-item-input" placeholder="Posición Y de la firma" ng-model="config.templates.checksSolution.signatureYPos">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="button button-block button-assertive">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

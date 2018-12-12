@@ -1,0 +1,21 @@
+<ion-view cache-view="false">
+    <ion-content class="auto-overflow-content">
+        <div class="button-container">
+            <button class="button button-block button-assertive" ng-click="showRequestSigned()">
+                <i class="fa fa-eye" aria-hidden="true"></i>Ver solicitud generada
+            </button>
+        </div>
+
+        <form ng-submit="showSuccessMessage()" class="custom-form">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="password" placeholder="Código PIN" ng-model="form.pinNumber">
+                    <div class="input-colored-line"></div>
+                </label>
+                <div class="button-container">
+                    <button class="button button-block"  ng-click="showSuccessMessage()"> Confirmar </button>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+.checkbox-design{
+    display: flex;
+   justify-content: right;
+   align-items: right;
+   height:70px;
+}
+
+.checkbox-design span{
+    padding-left:10%;
+    padding-top: 25px;
+}
+.checkbox-design img{
+    
+    width:70px;
+    height:70px;
+}
+.form{
+    padding:15px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+.button-form{
+    padding:15px
+}
